@@ -15,3 +15,9 @@ else
   (>&2 echo "Could not find a pom.xml file! Please check that it exists and is committed to Git.")
   exit 1
 fi
+
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+echo "Google Chrome"
+exit 0
