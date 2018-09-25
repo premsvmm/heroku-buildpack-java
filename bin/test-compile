@@ -25,3 +25,7 @@ cache_copy ".m2" $CACHE_DIR $BUILD_DIR
 run_mvn "test-compile" $BUILD_DIR $BUILD_DIR
 write_mvn_profile $BUILD_DIR
 cache_copy ".m2" $BUILD_DIR $CACHE_DIR
+
+for DIR in ".m2" ".maven" ; do
+  cp -r $CACHE_DIR/$DIR $BUILD_DIR/$DIR
+done
